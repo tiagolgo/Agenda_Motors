@@ -175,7 +175,7 @@ public class UsuarioController {
             Usuario user = this.du.getUsuario(usuario.getEmail());
             this.sessao.setUsuario(user);
             //enviar confirmação de cadastro
-            confirmaCadastro(usuario);
+//            confirmaCadastro(usuario);
             //redirecionar à pagina inicial
             result.redirectTo(this).index();
         } catch (Exception ex) {
@@ -194,11 +194,11 @@ public class UsuarioController {
         }
     }
 
-    private void confirmaCadastro(Usuario usuario) {
-        //enviar email de confirmação de cadastro
-        String msn = usuario.getNome() + ". Seu cadastro no Agenda Motors foi realizado com sucesso.";
-        List<Object> email = new ArrayList();
-        email.add(usuario.getEmail());
-        this.sendMail.enviar("Agenda Motors - Confirmação de Cadastro", msn, email);
-    }
+//    private void confirmaCadastro(Usuario usuario) {
+//        //enviar email de confirmação de cadastro
+//        String msn = usuario.getNome() + ". Seu cadastro no Agenda Motors foi realizado com sucesso.";
+//        List<Object> email = new ArrayList();
+//        email.add(usuario.getEmail());
+//        this.sendMail.enviar("Agenda Motors - Confirmação de Cadastro", msn, email);
+//    }
 }

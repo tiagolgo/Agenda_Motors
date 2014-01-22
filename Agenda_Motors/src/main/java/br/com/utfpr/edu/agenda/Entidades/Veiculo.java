@@ -32,7 +32,7 @@ public class Veiculo implements Serializable {
     private String marca, modelo, placa, ano, alerta;
     private String dataCadastro;
     private String km, kmdia;
-    @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "carro")
     private List<Item> itens = new ArrayList();
     @ManyToOne(cascade = CascadeType.ALL)
@@ -52,7 +52,11 @@ public class Veiculo implements Serializable {
     }
 
     public void setMarca(String marca) {
-        this.marca = marca.toUpperCase();
+        if (marca == null) {
+            this.marca = marca;
+        } else {
+            this.marca = marca.toUpperCase();
+        }
     }
 
     public String getModelo() {
@@ -60,7 +64,11 @@ public class Veiculo implements Serializable {
     }
 
     public void setModelo(String modelo) {
-        this.modelo = modelo.toUpperCase();
+        if (modelo == null) {
+            this.modelo = modelo;
+        } else {
+            this.modelo = modelo.toUpperCase();
+        }
     }
 
     public String getPlaca() {
@@ -76,7 +84,7 @@ public class Veiculo implements Serializable {
     }
 
     public void setAno(String ano) {
-            this.ano = ano;
+        this.ano = ano;
     }
 
     public String getDataCadastro() {
@@ -85,12 +93,10 @@ public class Veiculo implements Serializable {
 
     public void setDataCadastro(String dataCadastro) {
         if (dataCadastro == null) {
-            System.err.println("Setando nova data de cadastro");
             Calendar cal = Calendar.getInstance();
             this.dataCadastro = cal.get(Calendar.DAY_OF_MONTH) + "/" + (cal.get(Calendar.MONTH) + 1) + "/" + cal.get(Calendar.YEAR);
         } else {
-            System.err.println("Data de cadastro não vazia "+dataCadastro);
-        this.dataCadastro = dataCadastro;
+            this.dataCadastro = dataCadastro;
         }
     }
 
@@ -99,7 +105,11 @@ public class Veiculo implements Serializable {
     }
 
     public void setKm(String km) {
-        this.km = km.replace(".", "");
+        if (km == null) {
+            this.km = km;
+        } else {
+            this.km = km.replace(".", "");
+        }
     }
 
     public String getKmdia() {

@@ -47,7 +47,7 @@
             <div class="modal-footer">
                 <div style="padding-top: 15px;">
                     <button type="submit" class="btn btn-xs col-lg-3 btn-primary">Salvar</button>
-                    <button type="button" class="btn btn-xs col-lg-3 btn-warning" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-xs col-lg-3 btn-warning" data-dismiss="modal">Sair</button>
                 </div>
             </div>
         </div> 

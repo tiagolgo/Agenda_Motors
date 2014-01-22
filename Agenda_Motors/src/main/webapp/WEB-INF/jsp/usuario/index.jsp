@@ -36,9 +36,8 @@
                 //remover conta
                 $('.delConta').on('click', function(event) {
                     event.preventDefault();
-                    var c = confirm("Confirma a exclusão da sua Conta?");
-                    if (c === true) {
-                        $(this).click();
+                    if (confirm("Confirma a exclusão da sua Conta?") === true) {
+                        $('#removeConta').submit();
                     }
                 });
 
@@ -120,7 +119,9 @@
                                         <span class="glyphicon glyphicon-lock"></span> <a class="contModal" href="<c:url value="/usuario/senha"/>">Alterar Senha</a>
                                     </div>
                                     <div class="row">
-                                        <span class="glyphicon glyphicon-remove"></span> <a class="delConta" href="<c:url value="/usuario/remove/${sessao.usuario.id}"/>">Remover Conta</a>
+                                        <form id="removeConta" action="<c:url value="/usuario/remove/${sessao.usuario.id}"/>">
+                                            <span class="glyphicon glyphicon-remove"></span> <a class="delConta" href>Remover Conta</a>
+                                        </form>
                                     </div>
                                 </div>
                             </div>

@@ -59,7 +59,7 @@
                                 <li><a class="contModal" href="<c:url value="/usuario/dados"/>">Alterar Dados Pessoais</a></li>
                                 <li><a class="contModal" href="<c:url value="/usuario/email"/>">Alterar Email</a></li>
                                 <li><a class="contModal" href="<c:url value="/usuario/senha"/>">Alterar Senha</a></li>
-                                <li><a class="delConta" href="<c:url value="/usuario/remove/${sessao.usuario.id}"/>">Remover Conta</a></li>
+                                <li><a class="delConta" href>Remover Conta</a></form></li>
                                 <li class="divider"></li>
                                 <li class="dropdown-header">Veículo</li>
                                 <li><a href="<c:url value="/veiculo/novo"/>">Adicionar</a></li>

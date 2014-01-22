@@ -6,7 +6,6 @@ package br.com.utfpr.edu.agenda.Controller;
 
 import br.com.caelum.vraptor.Delete;
 import br.com.caelum.vraptor.Get;
-import br.com.caelum.vraptor.Path;
 import br.com.caelum.vraptor.Post;
 import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
@@ -73,18 +72,21 @@ public class VeiculoController {
     public void adiciona(Veiculo veiculo) {
 
         if (veiculo.getMarca() == null || veiculo.getMarca().equals(" ")) {
-            this.validador.add(new ValidationMessage("Informe a marca!", null));
+            this.validador.add(new ValidationMessage("Informe a marca!", "veiculo"));
         }
         if (veiculo.getModelo() == null || veiculo.getModelo().equals(" ")) {
-            this.validador.add(new ValidationMessage("Informe o modelo!", null));
+            this.validador.add(new ValidationMessage("Informe o modelo!", "veiculo"));
         }
         if (veiculo.getPlaca() == null || veiculo.getPlaca().equals(" ")) {
-            this.validador.add(new ValidationMessage("Informe a Placa!", null));
+            this.validador.add(new ValidationMessage("Informe a Placa!", "veiculo"));
         }
         if (veiculo.getAno() == null || veiculo.getAno().equals(" ")) {
-            this.validador.add(new ValidationMessage("Informe o Ano do Veículo!", null));
+            this.validador.add(new ValidationMessage("Informe o Ano do Veículo!", "veiculo"));
         }
-
+        if (veiculo.getKm() == null || veiculo.getKm().equals(" ")) {
+            this.validador.add(new ValidationMessage("Informe a Kilometragem Atual do Veículo!", "veiculo"));
+        }
+       
         this.validador.onErrorRedirectTo(this).formulario();
 
         try {

@@ -18,33 +18,7 @@
           <script src="../../assets/js/html5shiv.js"></script>
           <script src="../../assets/js/respond.min.js"></script>
         <![endif]-->
-        <script>
-            /* $(function() {
-             $('#acessar').on('click', function(event) {
-             event.preventDefault();
-             var dados = $('#login').serialize();
-             $.ajax({
-             url: 'c:url value="/login/autentica"/>',
-             type: 'POST',
-             data: dados,
-             success: function() {
-             elert("sucesso");
-             $('#login').submit();
-             },
-             error:function(){
-             alert("erro");
-             }
-             });
-             });
-             });*/
-            $(document).ready(function() {
-                $('#modal').click(function() {
-                    alert("modal");
-                    $('#myModal').modal('toggle');
-                });
-
-            });
-        </script>
+       
     </head>
 
     <body style="text-align: justify">
@@ -85,9 +59,9 @@
             <div style="padding-top: 45px">
                 <div class="col-lg-6">
                     <img src="imagens/carro-manutencao.jpg" width="100%"/>
-                    <h3>Agenda de Manutenção de Veículos</h3>
+                    <!--<h3>Agenda de Manutenção de Veículos</h3>
                     <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-                    <p><a href="#" class="btn btn-primary btn-sm">Leia mais&raquo;</a></p>
+                    <p><a href="#" class="btn btn-primary btn-sm">Leia mais&raquo;</a></p>-->
 
                 </div>
                 <div class="col-lg-6">
